@@ -38,7 +38,7 @@ It is a **petition and community platform** built with Django, designed to let u
 
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend & Framework:** Python, Django  
-- **API Integration:** [NewsAPI](https://newsapi.org/) – for fetching daily news content  
+- **API Integration:** [NewsAPI](https://newsapi.org/) – for fetching daily news content (Add your API key in static/news.js)
 
 ---
 
