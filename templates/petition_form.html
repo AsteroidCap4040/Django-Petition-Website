@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/form.css">
+</head>
+<body>
+
+    <!-- Navbar starts -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <a href="home2.html" class="logo-link">
+                <img src="../images/logo.jpg" alt="PetitionWave Logo" class="logo-image">
+                <span class="logo-text">Voice<b>Wave</b></span>
+            </a>
+        </div>
+    
+        <div class="navbar-option">
+            <a href="browse.html" class="navbar-item">Browse</a>
+            <a href="post_select.html" class="navbar-item">Post</a>
+            <a href="news_select.html" class="navbar-item">News & Stories</a>
+            <a href="profile.html" class="navbar-item">Profile</a>
+        </div>
+    </div>
+    <!-- Navbar ends -->
+
+
+    <!-- Main box starts -->
+    <div class="main-petition-form">
+
+        <!-- title -->
+        <div class="petition-form-title">
+            <h1>Start Your Petition</h1>
+            <hr>
+        </div>
+
+        <!-- Petition form start -->
+        <div class="petition-form-info">
+            <form method="post">
+
+                <!-- BAsic info -->
+                <div class="petition-basic-info">
+                    <h2>Basic Info</h2>
+                    <input type="text" placeholder="Title">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="Country">
+                    <input type="text" placeholder="Description">
+                    
+                    <input type="number" placeholder="Required Number of Signatures"> 
+                    <select>
+                        <option value="volvo">Select the category that suits the best </option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <!-- Bacic info ends -->
+
+
+                <br>
+                <br>
+
+                <!-- Cause starts -->
+                <div class="petition-basic-info">
+                    <h2>Petition Cause & Actions</h2>
+                    <textarea placeholder="Explain the petition cause"></textarea>
+                    <br>
+                    <textarea placeholder="Necessary Actions to be taken"></textarea>
+                </div>
+                <!-- Cause ends -->
+
+                <br>
+                <br>
+
+                <!-- Image input starts -->
+                <div class="petition-basic-info">
+                    <h2>Images</h2>
+                    <input type="file" id="image1" onchange="previewImage(1)" accept="image/*" multiple>
+                    <input type="file" id="image2" onchange="previewImage(2)" accept="image/*" multiple>
+                    <input type="file" id="image3" onchange="previewImage(3)" accept="image/*" multiple>
+                </div>
+                <div id="preview-container" style="display: inline-block;"></div>
+                <!-- Image input ends -->
+
+                <br>
+                <br>
+
+                <!-- Action starts -->
+                <div class="petition-basic-info">
+                    <h2>Action Taker</h2>
+                    <input type="text" placeholder="Mention the name of the official (Include their title)">
+                    <input type="text" placeholder="Mention the name of the official (Include their title)">
+                    <input type="text" placeholder="Mention the name of the official (Include their title)">
+                </div>
+                <!-- Action ends -->
+
+                <br>
+                <br>
+
+                <!-- T&C starts -->
+                <div class="petition-basic-info">
+                    <input type="checkbox">
+                    <label>Do you want to allow comments on your post</label>
+                    <br>
+                    <input type="checkbox" required>
+                    <label>By creating this petition, you agree to abide by platform rules and ensure accuracy of information provided.</label>
+                </div>
+                <!-- T&C ends -->
+
+                <br>
+                <br>
+                <br>
+
+
+                <!-- Button starts -->
+                <div class="petition-submit-button">
+                    <a href="#">Discard</a>
+                    <input type="submit" value="Post">
+                </div>
+                <!-- Button ends -->
+
+
+                <script>
+                    function previewImage(inputNum) {
+                        var input = document.getElementById('image' + inputNum);
+                        var previewContainer = document.getElementById('preview-container');
+                
+                        // Find or create the preview div for this input
+                        var previewDiv = document.getElementById('preview' + inputNum);
+                        if (!previewDiv) {
+                            previewDiv = document.createElement('div');
+                            previewDiv.id = 'preview' + inputNum;
+                            previewDiv.className = 'image-preview';
+                            previewContainer.appendChild(previewDiv);
+                        } else {
+                            // Clear previous preview
+                            while (previewDiv.firstChild) {
+                                previewDiv.removeChild(previewDiv.firstChild);
+                            }
+                        }
+                
+                        if (input.files && input.files[0]) {
+                            var reader = new FileReader();
+                            reader.onload = function (e) {
+                                var imgElement = document.createElement('img');
+                                imgElement.src = e.target.result;
+                                imgElement.className = 'preview-image';
+                                previewDiv.appendChild(imgElement);
+                            };
+                            reader.readAsDataURL(input.files[0]);
+                        } else {
+                            var placeholderImage = document.createElement('img');
+                            placeholderImage.src = 'grey-placeholder-image.jpg'; // Replace with your grey image path
+                            placeholderImage.className = 'preview-image';
+                            previewDiv.appendChild(placeholderImage);
+                        }
+                    }
+                </script>             
+
+
+
+            </form>
+
+        </div>
+
+    </div>
+</body>
+</html>

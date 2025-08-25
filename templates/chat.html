@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Adoption Service</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f1f1f;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .card {
+            background-color: #1f1f1f;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+        }
+        input, button {
+            background-color: #333;
+            border: 1px solid #555;
+            color: #ffffff;
+            padding: 10px;
+            width: 100%;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+        button {
+            cursor: pointer;
+        }
+        .dark-theme {
+            background-color: #121212;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dog Adoption Service</h1>
+    </header>
+    <main>
+        <div class="section" id="login-section">
+            <h2>Login</h2>
+            <div class="card">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+        <div class="section" id="profile-section" style="display: none;">
+            <h2>Profile</h2>
+            <div class="card">
+                <p id="profile-info"></p>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+        <div class="section" id="browse-section" style="display: none;">
+            <h2>Browse Dogs for Adoption</h2>
+            <div class="card">
+                <p>Dog 1: Golden Retriever, 2 years old</p>
+            </div>
+            <div class="card">
+                <p>Dog 2: Labrador, 1 year old</p>
+            </div>
+            <div class="card">
+                <p>Dog 3: Beagle, 3 years old</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'user' && password === 'pass') {
+                document.getElementById('login-section').style.display = 'none';
+                document.getElementById('profile-section').style.display = 'block';
+                document.getElementById('browse-section').style.display = 'block';
+                document.getElementById('profile-info').textContent = `Welcome, ${username}!`;
+            } else {
+                alert('Invalid login credentials!');
+            }
+        }
+
+        function logout() {
+            document.getElementById('login-section').style.display = 'block';
+            document.getElementById('profile-section').style.display = 'none';
+            document.getElementById('browse-section').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

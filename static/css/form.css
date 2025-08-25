@@ -1,0 +1,119 @@
+.main-petition-form{
+    background-color: white;
+    margin: 40px;
+    padding: 40px;
+}
+
+/* Basic info  */
+input[type="text"],
+input[type="number"],
+select{
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    display: block; /* Display input fields as block elements */
+    margin-bottom: 20px; /* Add margin between input fields */
+}
+input:focus, select:focus{
+    border-color: #ff0000; /* Change border color to blue when focused */
+    outline: none; /* Remove default outline */
+}
+
+
+/* Causes and action */
+textarea{
+    width: 90%;
+    height: 150px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: block; /* Display input fields as block elements */
+    margin-bottom: 20px; /* Add margin between input fields */
+}
+textarea:nth-child(2){
+    width: 90%;
+    height: 300px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: block; /* Display input fields as block elements */
+    margin-bottom: 20px; /* Add margin between input fields */
+}
+textarea:focus{
+    border-color: #ff0000; /* Change border color to blue when focused */
+    outline: none; /* Remove default outline */
+}
+
+
+
+.petition-basic-info, .petition-submit-button{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* Petition submit button styles */
+.petition-submit-button {
+    text-align: right;
+}
+
+.petition-submit-button input[type="submit"] {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.petition-submit-button input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.petition-submit-button a{
+    padding: 10px 24px;
+    background-color: #606060;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.petition-submit-button a:hover {
+    background-color: #4a4a4a;
+}
+
+
+/* Image input */
+input[type="file"]{
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: block; /* Display input fields as block elements */
+    margin-bottom: 20px; /* Add margin between input fields */
+}
+input[type="file"]:focus{
+    border-color: #ff0000; /* Change border color to blue when focused */
+    outline: none; /* Remove default outline */
+}
+.image-preview {
+    display: inline-block;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    margin-top: 10px;
+}        
+.preview-image {
+    background-color: rgb(255, 255, 255);
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: 300px;
+    margin-right: -250px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: dashed 5px #4CAF50;
+    border-radius: 5px;
+}  

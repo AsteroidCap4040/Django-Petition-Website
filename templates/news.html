@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/news.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <a href="home2.html" class="logo-link">
+                <img src="../images/logo.jpg" alt="PetitionWave Logo" class="logo-image">
+                <span class="logo-text">Voice<b>Wave</b></span>
+            </a>
+        </div>
+    
+        <div class="navbar-option">
+            <a href="browse.html" class="navbar-item">Browse</a>
+            <a href="post_select.html" class="navbar-item">Post</a>
+            <a href="news_select.html" class="navbar-item">News & Stories</a>
+            <a href="profile.html" class="navbar-item">Profile</a>
+        </div>
+    </div>
+
+    <nav>
+        <div class="main-nav container flex">
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="environment" onclick="onNavItemClick('environment')">Environment</li>
+                    <li class="hover-link nav-item" id="animals" onclick="onNavItemClick('Animals')">Animals</li>
+                    <li class="hover-link nav-item" id="crime" onclick="onNavItemClick('crime')">Human rights</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="../static/js/news.js"></script>
+</body>
+</html>

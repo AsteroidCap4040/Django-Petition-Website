@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body{
+            background-color: rgb(30, 30, 30);
+        }
+        .navbar{
+            background-color: black;
+        }
+        .navbar-item, .logo-text{
+            color: white;
+        }
+        .about-image-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .about-image-container img {
+            height: 100px;
+            margin-bottom: 5px;
+        }
+
+        .about-image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white; /* Optional: Adjust text color for better visibility */
+        }
+        .about-image-text:hover{
+            font-size: 30px;
+            transition: 0.2s;
+        }
+
+        .about-image-text h2 {
+            margin: 0;
+        }
+
+        .about-message-container{
+            margin-top: 100px;
+            color: white;
+            text-align: center;
+        }
+        .message-main-container{
+            margin-top: 30px;
+            text-align: center;
+            font-size: 20px;
+            padding-left: 300px;
+            padding-right: 300px;
+        }
+
+        .about-second-message{
+            margin-top: 150px;
+            margin-bottom: 150px;
+            display: flex;
+            flex-direction: row;
+        }
+        .second-message-text{
+            padding-top: 100px;
+            padding-left: 75px;
+            padding-right: 75px;
+            text-align: center;
+            color: white;
+            width: 50%;
+        }
+        .second-message-text p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar starts here -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <a href="home2.html" class="logo-link">
+                <img src="../images/logo.jpg" alt="PetitionWave Logo" class="logo-image">
+                <span class="logo-text">Voice<b>Wave</b></span>
+            </a>
+        </div>
+
+        <div class="navbar-option">
+            <a href="browse.html" class="navbar-item">Browse</a>
+            <a href="post_select.html" class="navbar-item">Post</a>
+            <a href="news_select.html" class="navbar-item">News & Stories</a>
+            <a href="profile.html" class="navbar-item">Profile</a>
+        </div>
+    </div>
+    <!-- Navbar ends here -->
+
+    
+    <div class="about-image-container">
+        <img src="../images/zebra.jpg">
+        <div class="about-image-text">
+            <h2>We</h2>
+        </div>
+    </div>
+
+    <div class="about-image-container">
+        <img src="../images/crowd.jpg">
+        <div class="about-image-text">
+            <h2>Rise</h2>
+        </div>
+    </div>
+
+    <div class="about-image-container">
+        <img src="../images/planet.png">
+        <div class="about-image-text">
+            <h2>Together</h2>
+        </div>
+    </div>
+
+
+    <div class="about-message-container">
+        <h2>What is a Petition ?</h2>
+        <div class="message-main-container">
+            <p>"A petition, in the parlance of the law and governance, is a formal written request typically addressed to a governing body or authority, beseeching action or redress of a grievance. Crafted with meticulous attention to formality and precision, it embodies the collective voice of concerned individuals seeking to effect change or draw attention to a matter of public interest or concern. Rooted in the democratic tradition, petitions serve as potent instruments of civic engagement, allowing citizens to assert their rights, articulate their concerns, and petition their representatives for redress. Thus, they stand as enduring testaments to the power of civil discourse and collective action."</p>
+        </div>
+    </div>
+
+    <div class="about-second-message">
+        <div class="second-message-text">
+            <h2>Neccesity</h2>
+            <p>Petitions are indispensable tools for citizenry, enabling the expression of grievances, advocacy for change, and the promotion of democratic participation. They provide a structured avenue for collective voices to be heard by authorities, fostering accountability and responsiveness in governance. By amplifying the concerns of individuals, petitions serve as catalysts for societal progress, ensuring that the diverse needs and aspirations of communities are acknowledged and addressed.</p>
+        </div>
+        <div class="second-message-image">
+            <img src="../images/reporter.jpg">
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+           <div class="footer-row">
+               <div class="footer-col">
+                   <h4>company</h4>
+                   <ul>
+                       <li><a href="#">about us</a></li>
+                       <li><a href="#">our services</a></li>
+                       <li><a href="#">privacy policy</a></li>
+                       <li><a href="#">affiliate program</a></li>
+                   </ul>
+               </div>
+               <!-- <div class="footer-col">
+                   <h4>online shop</h4>
+                   <ul>
+                       <li><a href="#">watch</a></li>
+                       <li><a href="#">bag</a></li>
+                       <li><a href="#">shoes</a></li>
+                       <li><a href="#">dress</a></li>
+                   </ul>
+               </div> -->
+               <div class="footer-col">
+                   <h4>follow us</h4>
+                   <div class="social-links">
+                       <a href="#"><i class="fab fa-facebook-f"></i></a>
+                       <a href="#"><i class="fab fa-twitter"></i></a>
+                       <a href="#"><i class="fab fa-instagram"></i></a>
+                       <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </footer>
+
+</body>
+</html>

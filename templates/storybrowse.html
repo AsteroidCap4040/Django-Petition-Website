@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="../static/css/browse.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        .product-vote {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers items horizontally */
+            border-left: solid 1px black;
+            margin-left: 20px;
+        }
+
+        .product-vote span{
+            font-size: 25px;
+        }
+
+        .upvote{
+            margin: 10px; /* Adjust margin for spacing */
+            padding: 5px;
+        }
+        .upvote:hover{
+            background-color: rgb(119, 237, 139);
+            border-radius: 5px;
+            border: solid 2px green;
+            color: white;
+        }
+        .downvote {
+            margin: 10px; /* Adjust margin for spacing */
+            padding: 5px;
+        }
+        .downvote:hover{
+            background-color: rgb(237, 119, 119);
+            border-radius: 5px;
+            border: solid 2px rgb(128, 0, 0);
+            color: white;
+        }
+        .count-vote {
+            margin-bottom: 5px; /* Adjust margin for spacing */
+        }
+
+
+        .top-bar-of-browse {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .select-wrapper {
+            width: 150px;
+            height: 50px;
+            margin-right: 50px;
+            padding-left: 10px;
+            font-size: 20px;
+            border: solid 2px black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <a href="home2.html" class="logo-link">
+                <img src="../images/logo.jpg" alt="PetitionWave Logo" class="logo-image">
+                <span class="logo-text">Voice<b>Wave</b></span>
+            </a>
+        </div>
+    
+        <div class="navbar-option">
+            <a href="browse.html" class="navbar-item">Browse</a>
+            <a href="post_select.html" class="navbar-item">Post</a>
+            <a href="news_select.html" class="navbar-item">News & Stories</a>
+            <a href="profile.html" class="navbar-item">Profile</a>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <img src="../images/search2.jpg" alt="Search Image">
+        <div id="searchbar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <!-- Parent div containing filter options and product list -->
+    <div id="content">
+        <!-- Filter Options -->
+        <div id="filter-options">
+            <h2>Filter</h2>
+        
+            <div class="filter-section">
+                <label for="category">Categories:</label>
+                <ul name="category" id="category">
+                    <li value="volvo">Volvo</li>
+                    <li value="saab">Saab</li>
+                    <li value="mercedes">Mercedes</li>
+                    <li value="audi">Audi</li>
+                </ul>
+            </div>
+        
+            <div class="filter-section">
+                <label for="location">Location:</label>
+                <ul name="location" id="location">
+                    <li value="volvo">Volvo</li>
+                    <li value="saab">Saab</li>
+                    <li value="mercedes">Mercedes</li>
+                    <li value="audi">Audi</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Product List -->
+        <div id="product-list">
+            <div class="top-bar-of-browse">
+            <h2>Showing result </h2>
+            <select class="select-wrapper">
+                <option>Oldest First</option>
+                <option>Newset First</option>
+                <option>Most Likes</option>
+                <option>Least Likes</option>
+            </select>
+            </div>
+            <br>
+
+            <div class="product">
+                <img src="../images/search.jpg" alt="Product Image" width="200" height="200">
+                <div class="product-info">
+                    <h3>Title of the Product</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                    <div class="petition_buttons">
+                    <div class="petition_view_button">
+                    <a href="stroyview.html" class="button">View the post</a>
+                    </div>
+                    <div class="petition_update_button">
+                    <a href="#"><span class="material-symbols-outlined" id="symbol_2">delete</span></a>
+                    </div>
+                    </div>
+                </div>
+                <div class="product-vote">
+                    <div class="upvote">
+                        <span class="material-symbols-outlined">north</span>
+                    </div>
+                    <div class="count-vote">
+                        <span>0</span>
+                    </div>
+                    <div class="downvote">
+                        <span class="material-symbols-outlined">south</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="product">
+                <img src="../images/search.jpg" alt="Product Image" width="200" height="200">
+                <div class="product-info">
+                    <h3>Title of the Product</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                    <div class="petition_buttons">
+                    <div class="petition_view_button">
+                    <a href="stroyview.html" class="button">View the post</a>
+                    </div>
+                    <div class="petition_update_button">
+                    <a href="#"><span class="material-symbols-outlined" id="symbol_2">delete</span></a>
+                    </div>
+                    </div>
+                </div>
+                <div class="product-vote">
+                    <div class="upvote">
+                        <span class="material-symbols-outlined">north</span>
+                    </div>
+                    <div class="count-vote">
+                        <span>0</span>
+                    </div>
+                    <div class="downvote">
+                        <span class="material-symbols-outlined">south</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product">
+                <img src="../images/search.jpg" alt="Product Image" width="200" height="200">
+                <div class="product-info">
+                    <h3>Title of the Product</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                    <div class="petition_buttons">
+                    <div class="petition_view_button">
+                    <a href="stroyview.html" class="button">View the post</a>
+                    </div>
+                    <div class="petition_update_button">
+                    <a href="#"><span class="material-symbols-outlined" id="symbol_2">delete</span></a>
+                    </div>
+                    </div>
+                </div>
+                <div class="product-vote">
+                    <div class="upvote">
+                        <span class="material-symbols-outlined">north</span>
+                    </div>
+                    <div class="count-vote">
+                        <span>0</span>
+                    </div>
+                    <div class="downvote">
+                        <span class="material-symbols-outlined">south</span>
+                    </div>
+                </div>
+            </div>
+
+
+            
+        </div>               
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+           <div class="footer-row">
+               <div class="footer-col">
+                   <h4>company</h4>
+                   <ul>
+                       <li><a href="#">about us</a></li>
+                       <li><a href="#">our services</a></li>
+                       <li><a href="#">privacy policy</a></li>
+                       <li><a href="#">affiliate program</a></li>
+                   </ul>
+               </div>
+               <div class="footer-col">
+                   <h4>follow us</h4>
+                   <div class="social-links">
+                       <a href="#"><i class="fab fa-facebook-f"></i></a>
+                       <a href="#"><i class="fab fa-twitter"></i></a>
+                       <a href="#"><i class="fab fa-instagram"></i></a>
+                       <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                   </div>
+               </div>
+           </div>
+        </div>
+     </footer>
+
+</body>
+</html>

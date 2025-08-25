@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: rgb(233, 230, 230);
+    font-family: Arial, sans-serif; /* Set font family */
+}
+a{
+  text-decoration: none;
+}
+
+/* Navbar CSS starts  */
+.navbar {
+  background-color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0 20px; /* Added some padding */
+}
+
+/* Style for the logo */
+.navbar-logo {
+  flex: 30%; /* Take 30% of the space */
+}
+
+.logo-link {
+  color: black;
+  text-decoration: none;
+  font-size: 30px; /* Increased font size */
+  font-weight: bold; /* Added bold font weight */
+  display: flex; /* Make the link a flex container */
+  align-items: center; /* Center items vertically */
+}
+
+.logo-image {
+  width: 70px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add space between image and text */
+}
+
+/* Style for the navbar options */
+.navbar-option {
+  flex: 70%; /* Take the rest of the space */
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+}
+
+/* Style for navbar items */
+.navbar-item {
+  color: black;
+  padding: 10px 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.navbar-item:hover {
+  background-color: #555; /* Darken background color on hover */
+}
+
+
+/* Navbar CSS ends  */
+
+
+/* Main Slide CSS starts  */
+  img{
+      width: 100%; /* Set width to 100% of its container */
+      height: 500px; /* Set height to 100% of its container */
+      object-fit: cover; /* Ensure the image covers the entire container */
+  }
+  .text-overlay {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(0, 0, 0);
+      font-size: 50px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 10px;
+  }
+  .screen_button {
+      --b: 3px;   /* border thickness */
+      --s: .45em; /* size of the corner */
+      --color: #373B44;
+      
+      padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+      color: var(--color);
+      --_p: var(--s);
+      background:
+          conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+          var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+      transition: .3s linear, color 0s, background-color 0s;
+      outline: var(--b) solid #0000;
+      outline-offset: .6em;
+      font-size: 16px;
+
+      border: 0;
+
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+  }
+
+  .screen_button:hover,
+  .screen_button:focus-visible {
+      --_p: 0px;
+      outline-color: var(--color);
+      outline-offset: .05em;
+  }
+
+  .screen_button:active {
+      background: var(--color);
+      color: #fff;
+  }
+
+  #dynamic-image {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  /* Main Slide CSS ends  */
+
+
+  
+  /* Style for footer */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  /* *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+  } */
+  .footer-container{
+      max-width: 1170px;
+      margin:auto;
+  }
+  .footer-row{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  ul{
+      list-style: none;
+  }
+  .footer{
+      background-color: #4b4b4b;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  .footer-col h4{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+  }
+  .footer-col h4::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+      margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+      color: #ffffff;
+      padding-left: 8px;
+  }
+  .footer-col .social-links a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255,255,255,0.2);
+      margin:0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+      color: #24262b;
+      background-color: #ffffff;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  /* Style for footer ends */
+
+
+
+/* CSS for category starts */
+
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; 
+  margin-top: 20px; 
+}
+
+
+.category-item {
+  width: 120px;
+  height: 60px;
+  background-color: #d3d3d3;
+  border: none;
+  border-radius: 30px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-item:hover {
+  background-color: #e0e0e0;
+}
+
+.category-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* CSS for category ends */

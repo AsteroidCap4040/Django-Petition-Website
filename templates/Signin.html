@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/css/signin.css">
+</head>
+<body>
+  <div class="container">
+    <div class="main-box">
+      <div class="logo">
+        <img src="../images/logo.jpg" alt="Logo Image">
+        <h1>VoiceWave</h1>
+      </div>
+      <div class="signup-info">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+          <div class="section" id="section1">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" placeholder="Email" required>
+          </div>
+          <div class="section" id="section2" style="display: none;">
+            <input type="number" placeholder="Age" required>
+            <select required>
+              <option value="" disabled selected>Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            <input type="text" placeholder="City" required>
+            <input type="text" placeholder="Country" required>
+          </div>
+          <div class="section" id="section3" style="display: none;">
+            <label for="profileImage" id="profileImageLabel">Upload Profile Image</label>
+            <input type="file" id="profileImage" required>
+            <br>
+            <br>
+            <label>About You</label>
+            <textarea placeholder="Tell us about yourself"></textarea>
+          </div>          
+          <div class="section" id="section4" style="display: none;">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+          </div>
+          <div class="create-account">Already have an account? <a href="login.html">Log in!</a></div>
+          <div class="button-container">
+            <button type="button" id="backBtn" style="display: none;">Back</button>
+            <button type="button" id="nextBtn">Next</button>
+            <input type="submit" value="Sign Up" style="display: none;">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sections = document.querySelectorAll(".section");
+      const backButton = document.getElementById("backBtn");
+      const nextButton = document.getElementById("nextBtn");
+      const form = document.getElementById("signup-form");
+      let currentSectionIndex = 0;
+
+      function showSection(index) {
+        sections.forEach((section, i) => {
+          if (i === index) {
+            section.style.display = "block";
+          } else {
+            section.style.display = "none";
+          }
+        });
+      }
+
+      function validateCurrentSection() {
+        const inputs = sections[currentSectionIndex].querySelectorAll("input, select, textarea");
+        let isValid = true;
+        inputs.forEach(input => {
+          if (!input.checkValidity()) {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+
+      nextButton.addEventListener("click", function() {
+        if (validateCurrentSection()) {
+          currentSectionIndex++;
+          showSection(currentSectionIndex);
+          backButton.style.display = "block";
+          if (currentSectionIndex === sections.length - 1) {
+            nextButton.style.display = "none";
+            form.querySelector("input[type=submit]").style.display = "block";
+          }
+        } else {
+          // Show error message or handle validation error
+        }
+      });
+
+      backButton.addEventListener("click", function() {
+        currentSectionIndex--;
+        showSection(currentSectionIndex);
+        nextButton.style.display = "block";
+        form.querySelector("input[type=submit]").style.display = "none";
+        if (currentSectionIndex === 0) {
+          backButton.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+

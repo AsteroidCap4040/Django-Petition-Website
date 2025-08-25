@@ -1,0 +1,356 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif; /* Set font family */
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+/* Style for the navbar */
+.navbar {
+    background-color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 20px; /* Added some padding */
+  }
+  
+  /* Style for the logo */
+  .navbar-logo {
+    flex: 30%; /* Take 30% of the space */
+  }
+  
+  .logo-link {
+    color: black;
+    text-decoration: none;
+    font-size: 30px; /* Increased font size */
+    font-weight: bold; /* Added bold font weight */
+    display: flex; /* Make the link a flex container */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .logo-image {
+    width: 70px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between image and text */
+  }
+  
+  /* Style for the navbar options */
+  .navbar-option {
+    flex: 70%; /* Take the rest of the space */
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+  }
+  
+  /* Style for navbar items */
+  .navbar-item {
+    color: black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .navbar-item:hover {
+    background-color: #555; /* Darken background color on hover */
+  }
+/* navbar ends */
+
+
+
+
+/* Style for the search bar */
+#searchbar {
+    display: flex;
+    align-items: center;
+    width: 400px; /* Adjust width as needed */
+    padding: 70px;
+    margin: 0 auto; /* Centering the search bar */
+}
+
+#searchbar input[type="text"] {
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    width: 70%; /* Adjust width as needed */
+    font-size: 16px;
+}
+
+
+#searchbar button {
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: none;
+    background-color: #007bff; /* Change color as needed */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+#searchbar button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+.search-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Set height to 200px */
+    overflow: hidden; /* Hide overflow if image is taller */
+}
+.search-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#searchbar {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+#searchbar input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+#searchbar button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Search bar css ends */
+
+/* content css starts */
+#content {
+    display: flex; /* Make children elements flex */
+    justify-content: space-between; /* Space them evenly */
+    /* padding: 10px; */
+}
+
+/* Style for the filter options */
+#filter-options {
+    width: 20%;
+    background-color: #cecece;
+    border-right: 1px solid #000000;
+    padding: 20px;
+}
+
+#filter-options h2 {
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.filter-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.filter-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-section ul li {
+    margin-bottom: 5px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.filter-section ul li:hover {
+    background-color: #f0f0f0;
+}
+/* filter css ends */
+
+/* Style for the product list */
+#product-list {
+    width: 80%;
+    padding: 10px;
+}
+.product {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 1); /* Horizontal offset, vertical offset, blur radius, color and transparency */
+}
+
+.product img {
+    margin-right: 10px;
+    border-radius: 5%; /* To make the image round */
+}
+
+.product-info {
+    flex-grow: 1;
+    align-self: flex-start;
+}
+
+.product h3 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.product p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+.button {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border: solid 3px black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    color: white;
+    background-color: #0062cb;
+}
+
+
+.petition_buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.petition_update_button span {
+    font-size: 40px;
+    border: solid 3px black;
+    border-radius: 5px;
+}
+#symbol_1:hover{
+    color: white;
+    background-color: rgb(37,174,136);
+}
+#symbol_2:hover{
+    color: white;
+    background-color: red;
+}
+
+/* #product-list{
+    max-height: 600px; 
+    overflow-y: auto;
+} */
+
+/* content css ends */
+
+
+
+/* Style for the footer */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  /* *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+  } */
+  .footer-container{
+      max-width: 1170px;
+      margin:auto;
+  }
+  .footer-row{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  ul{
+      list-style: none;
+  }
+  .footer{
+      background-color: #4b4b4b;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  .footer-col h4{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+  }
+  .footer-col h4::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+      margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+      color: #ffffff;
+      padding-left: 8px;
+  }
+  .footer-col .social-links a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255,255,255,0.2);
+      margin:0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+      color: #24262b;
+      background-color: #ffffff;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+
+
+
+

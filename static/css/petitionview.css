@@ -1,0 +1,272 @@
+.main-view-page{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 65px auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.main-content-page{
+    padding: 30px;
+}
+.image-petition-box{
+    padding: 20px;
+    border: none;
+}
+.image-petition-box img{
+    width: 300px;
+    height: 300px;
+}
+.submit-petition-to{
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+.submit-petition-to h3,
+.submit-petition-to p {
+    margin: 0; /* Remove default margin */
+    padding: 1px 0; /* Adjust padding as needed */
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 10px; /* Add margin for spacing */
+}
+
+.progress-bar {
+    background-color: rgb(47,189,48);
+    height: 100%;
+    width: 0;
+}
+
+#vote-count,
+#votes-required {
+    margin: 0;
+}
+
+.vote-info {
+    margin-right: auto; /* Pushes the right vote info to the right side */
+}
+.sign-this-petition {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sign-this-petition p {
+    font-size: 18px;
+    margin-right: 10px; /* Add margin between text and button */
+    color: #333; /* Adjust text color */
+    display: inline; /* Display text inline */
+}
+
+.sign-this-petition button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.comment-user-box {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.comment-image {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.comment-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make the image circular */
+}
+
+.comment-text {
+    flex-grow: 1;
+}
+
+.posted-date {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 3px; /* Adjust margin for spacing */
+}
+
+.user-name {
+    margin-top: -2px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Reduced margin between username and message */
+}
+
+.message {
+    margin-top: 5px;
+}
+/* CSS for modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 400px; /* Set max width */
+    border-radius: 8px;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button container */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Button styles */
+.btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.yes-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.no-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.comment-box {
+    position: relative;
+    height: 150px; /* Adjust height as needed */
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+  
+textarea {
+    width: 100%;
+    height: 70%;
+    resize: none; /* Disable resizing */
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+  
+.post-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: calc(30% - 15px); /* Adjust width and margin as needed */
+    height: 30px; /* Adjust height as needed */
+    background-color: rgb(47,189,48);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+.main-insight-section {
+    margin-bottom: 20px;
+}
+
+.main-insight-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-insight-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.main-insight-section a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+}
+
+.main-insight-section a:hover {
+    text-decoration: underline;
+}
+
+.main-insight-section hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+  

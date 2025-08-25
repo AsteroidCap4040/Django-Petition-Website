@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/browse.css">
+    <link rel="stylesheet" href="../static/css/profile.css">
+    
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <a href="home2.html" class="logo-link">
+                <img src="../images/logo.jpg" alt="PetitionWave Logo" class="logo-image">
+                <span class="logo-text">Voice<b>Wave</b></span>
+            </a>
+        </div>
+    
+        <div class="navbar-option">
+            <a href="browse.html" class="navbar-item">Browse</a>
+            <a href="post_select.html" class="navbar-item">Post</a>
+            <a href="news_select.html" class="navbar-item">News & Stories</a>
+            <a href="profile.html" class="navbar-item">Profile</a>
+        </div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-sidebar">
+            <div class="profile-image">
+                <img src="../images/search.jpg" alt="Profile Image">
+            </div>
+            <div class="profile-categories">
+                <ul>
+                    <li onclick="showInfo()">Info</li>
+                    <li onclick="showPetitions()">Your Petitions</li>
+                    <li onclick="signPetitions()">Signed Petition</li>
+                    <li onclick="storyContent()">Your Stories</li>
+                    <li onclick="logout()">Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="profile-containts">
+            <!-- Content for the profile main section -->
+            <div id="infoContent" style="display: none;">
+                <!-- Content for info -->
+                <h2>Info</h2>
+                <p><b>First Name:</b> Prithvi</p>
+                <p><b>Last Name:</b> Devadiga</p>
+                <p><b>Username:</b> YourNigaHiga</p>
+                <p><b>Age:</b> 19</p>
+                <p><b>Gender:</b> Male</p>
+                <p><b>Email:</b> prithvi@gmail.com</p>
+                <p><b>Location:</b> Mumbai, India</p>
+                <p><b>About me:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quaerat blanditiis modi, est minima totam at accusantium debitis alias cupiditate illum a doloribus ex deserunt, sint dolorem fugit mollitia omnis!</p>
+                <p><b>Date of creation:</b> 07/04/2024</p>
+                <!-- Add more info fields as needed -->
+            </div>
+            <div id="petitionsContent" style="display: none;">
+                <!-- Content for petitions -->
+                <h2>Your Petitions</h2>
+                <br>
+                <div class="product">
+                    <img src="../images/search.jpg" alt="Product Image" width="200" height="200">
+                    <div class="product-info">
+                        <h3>Title of the Product</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                        <a href="#" class="button">View this petition</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/search.jpg" alt="Product Image" width="200" height="200">
+                    <div class="product-info">
+                        <h3>Title of the Product</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                        <a href="#" class="button">View this petition</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/search.jpg" alt="Product Image" width="200" height="200">
+                    <div class="product-info">
+                        <h3>Title of the Product</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                        <a href="#" class="button">View this petition</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/search.jpg" alt="Product Image" width="200" height="200">
+                    <div class="product-info">
+                        <h3>Title of the Product</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                        <a href="#" class="button">View this petition</a>
+                    </div>
+                </div>
+
+                <!-- Add more petitions as needed -->
+            </div>
+            <div id="sign-petitionsContent" style="display: none;">
+                <!-- Content for petitions -->
+                <h2>Petitions You Signed</h2>
+                <br>
+                <div class="product">
+                    <img src="../images/search2.jpg" alt="Product Image" width="200" height="200">
+                    <div class="product-info">
+                        <h3>Title of the Product</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                        <a href="#" class="button">View this petition</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/search2.jpg" alt="Product Image" width="200" height="200">
+                    <div class="product-info">
+                        <h3>Title of the Product</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                        <a href="#" class="button">View this petition</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/search2.jpg" alt="Product Image" width="200" height="200">
+                    <div class="product-info">
+                        <h3>Title of the Product</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                        <a href="#" class="button">View this petition</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/search2.jpg" alt="Product Image" width="200" height="200">
+                    <div class="product-info">
+                        <h3>Title of the Product</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                        <a href="#" class="button">View this petition</a>
+                    </div>
+                </div>
+
+                <!-- Add more petitions as needed -->
+            </div>
+
+
+
+            <div id="story-Content" style="display: none;">
+                <!-- Content for petitions -->
+                <h2>Petitions You Signed</h2>
+                <br>
+                <div class="product">
+                    <img src="../images/search2.jpg" alt="Product Image" width="200" height="200">
+                    <div class="product-info">
+                        <h3>Title of the Product</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                        <a href="#" class="button">View this petition</a>
+                    </div>
+                </div>
+
+
+                <div class="product">
+                    <img src="../images/search2.jpg" alt="Product Image" width="200" height="200">
+                    <div class="product-info">
+                        <h3>Title of the Product</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia facilis quasi eveniet cumque, neque voluptas magnam quia! Hic corporis accusantium illo labore pariatur iusto facere. Pariatur ipsam nulla maxime doloremque.</p>
+                        <a href="#" class="button">View this petition</a>
+                    </div>
+                </div>
+
+                <!-- Add more petitions as needed -->
+            </div>
+
+
+
+            <div id="logout-content" style="display: none;">
+                <h2>Youu Logged out</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Call showInfo() when the page finishes loading
+        window.onload = function() {
+            showInfo();
+        };
+
+        function showInfo() {
+            document.getElementById('infoContent').style.display = 'block';
+            document.getElementById('petitionsContent').style.display = 'none';
+            document.getElementById('sign-petitionsContent').style.display = 'none';
+            document.getElementById('logout-content').style.display = 'none';
+        }
+
+        function showPetitions() {
+            document.getElementById('infoContent').style.display = 'none';
+            document.getElementById('petitionsContent').style.display = 'block';
+            document.getElementById('sign-petitionsContent').style.display = 'none';
+            document.getElementById('story-Content').style.display = 'none';
+            document.getElementById('logout-content').style.display = 'none';
+        }
+        function signPetitions(){
+            document.getElementById('infoContent').style.display = 'none';
+            document.getElementById('petitionsContent').style.display = 'none';
+            document.getElementById('sign-petitionsContent').style.display = 'block';
+            document.getElementById('story-Content').style.display = 'none';
+            document.getElementById('logout-content').style.display = 'none';
+        }
+
+        function storyContent(){
+            document.getElementById('infoContent').style.display = 'none';
+            document.getElementById('petitionsContent').style.display = 'none';
+            document.getElementById('sign-petitionsContent').style.display = 'none';
+            document.getElementById('story-Content').style.display = 'block';
+            document.getElementById('logout-content').style.display = 'none';
+        }
+
+        function logout() {
+            // Handle logout logic here
+            document.getElementById('infoContent').style.display = 'none';
+            document.getElementById('petitionsContent').style.display = 'none';
+            document.getElementById('sign-petitionsContent').style.display = 'none';
+            document.getElementById('story-Content').style.display = 'none';
+            document.getElementById('logout-content').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+
